@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   loading: false,
-  user: [],
+  users: [],
   error: "",
 };
 const userReducer = (state = initialState, action) => {
@@ -25,10 +25,11 @@ const userReducer = (state = initialState, action) => {
     case FETCH_TO_ERROR:
       return {
         loading: false,
-        user: [action.payload],
+        user: [],
         error: action.payload,
       };
     default:
       return state;
   }
 };
+export default userReducer;

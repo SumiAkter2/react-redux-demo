@@ -1,11 +1,12 @@
 import { combineReducers } from "redux";
 import ChocolateReducer from "./Chocolate/ChocolateReducer";
 import CakeReducer from "./Cake/CakeReducer";
-import { useReducer } from "react";
+import userReducer from "./User/userReducer";
+
 
 const rootReducer = combineReducers({
   cake: CakeReducer,
   chocolate: ChocolateReducer,
-  user: useReducer,
+  user: userReducer,
 });
 export default rootReducer;
