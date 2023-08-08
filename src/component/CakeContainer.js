@@ -5,15 +5,15 @@ import { connect } from "react-redux";
 const CakeContainer = (props) => {
   return (
     <div>
-      <h1>It's from Cake Container</h1>
-      <h3>Number of Cakes :{props.numOfCake} </h3>
+      <h5>It's from Cake Container</h5>
+      <h2>Number of Cakes :{props.numOfCake} </h2>
       <button onClick={props.buyCake}>Buy Cake</button>
     </div>
   );
 };
 const mapStateToProps = (state) => {
   return {
-    numOfCake: state.numOfCake,
+    numOfCake: state.cake.numOfCake,
   };
 };
 const mapDispatchToProps = (dispatch) => {
